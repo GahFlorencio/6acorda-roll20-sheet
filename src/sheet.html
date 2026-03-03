@@ -1,0 +1,159 @@
+<div class="sheet-container-sheet">
+        <div class="sheet-content-sheet">
+            <div class="sheet-top-image-sheet"></div>
+            <div class="sheet-middle-sheet">
+                <div class="sheet-section">
+                    <div class="sheet-badge-name">
+                        <input type="text" class="sheet-character-name-input" name="attr_character_name" placeholder="Nome do Personagem">
+                    </div>
+                </div>
+                <div class="sheet-section">
+                    <div class="sheet-section-column">
+                        <!-- Seção de Informações-->
+                        <div class="sheet-board">
+                            <div class="sheet-board-top">
+                                <span>INFORMAÇÕES</span>  
+                            </div>
+                            <div class="sheet-board-body"> 
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>RAÇA: </span>
+                                        <input type="text" class="sheet-default-input" name="attr_raca" placeholder="Humano, Elfo, Anão...">
+                                    </div>
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>CLASSE: </span>
+                                        <input type="text" class="sheet-default-input" name="attr_classe" placeholder="Guerreiro, Mago, Ladino...">
+                                    </div>
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>NÍVEL: </span>
+                                        <input type="number" class="sheet-default-input" name="attr_nivel" placeholder="1, 2, 3...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Seção de Atributos-->
+                        <div class="sheet-board">
+                            <div class="sheet-board-top">
+                                <span>ATRIBUTOS [  </span>  
+                                <span  name="attr_pts_disponivel">  </span>
+                                <span>]</span>
+                                <input type="hidden" name="attr_pts_disponivel" value="0">
+                            </div>
+                            <div class="sheet-board-body"> 
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>FORÇA: </span>
+                                        <span class="sheet-board-value" name="attr_forca" ></span>
+                                        <input type="hidden" name="attr_forca" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>DESTREZA: </span>
+                                        <span class="sheet-board-value" name="attr_destreza" ></span>
+                                        <input type="hidden" name="attr_destreza" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>CONSTITUIÇÃO: </span>
+                                        <span class="sheet-board-value" name="attr_constituicao" ></span>
+                                        <input type="hidden" name="attr_constituicao" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>INTELIGÊNCIA: </span>
+                                        <span class="sheet-board-value" name="attr_inteligencia" ></span>
+                                        <input type="hidden" name="attr_inteligencia" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>SABEDORIA: </span>
+                                        <span class="sheet-board-value" name="attr_sabedoria" ></span>
+                                        <input type="hidden" name="attr_sabedoria" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                                <div class="sheet-board-row">
+                                    <div class="sheet-board-item">
+                                        <span>CARISMA: </span>
+                                        <span class="sheet-board-value" name="attr_carisma" ></span>
+                                        <input type="hidden" name="attr_carisma" value="0">
+                                    </div>
+                                    <input type="button" value="+" class="sheet-board-button">
+                                </div>
+                            
+                            </div>
+                        </div>  
+                    </div>
+
+                    <div class="sheet-section-column">
+                        <!-- Seção de Habilidades Básicas-->
+                        <div class="sheet-board">
+                            <div class="sheet-table-top"> HABILIDADES BÁSICAS</div>
+                            <div class="sheet-table-body">
+                                <div class="sheet-section-table-header">
+                                        <span type="text" class="sheet-table-header size-table-p"> Nv.</span>
+                                        <span type="text" class="sheet-table-header"> Nome</span>
+                                </div>
+                                <div class="repeating_habilidades_basicas">
+                                    <div class="sheet-section-table">
+                                        <input type="text" name="attr_hab_basic_nivel" placeholder="0" class="sheet-table-input sheet-size-table-p sheet-align-text-center">
+                                        <input type="text" name="attr_hab_basic_nome" placeholder="Soco infernal" class="sheet-table-input sheet-padding-left-3">
+                                    </div>                             
+                                </div>
+                                
+                            </div>
+                        </div>
+                         <!-- Seção de Habilidades Avançadas-->
+                        <div class="sheet-board">
+                            <div class="sheet-table-top"> HABILIDADES AVANÇADAS</div>
+                            <div class="sheet-table-body">
+                                <div class="sheet-section-table-header">
+                                        <span type="text" class="sheet-table-header sheet-size-table-p"> Nv.</span>
+                                        <span type="text" class="sheet-table-header"> Nome</span>
+                                </div>
+                                <div class="repeating_habilidades_avançadas">
+                                    <div class="sheet-section-table">
+                                        <input type="text" name="attr_hab_avancada_nivel" placeholder="0" class="sheet-table-input sheet-size-table-p sheet-align-text-center">
+                                        <input type="text" name="attr_hab_avancada_nome" placeholder="Soco infernal" class="sheet-table-input sheet-padding-left-3">
+                                    </div>                             
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sheet-section">
+                <!-- Seção de inventário-->
+                    <div class="sheet-board">
+                        <div class="sheet-table-top-full"> INVENTÁRIO</div>
+                        <div class="sheet-table-body-full">
+                            <div class="sheet-section-table-header-full">
+                                    <span type="text" class="sheet-table-header sheet-size-table-p"> Qtd.</span>
+                                    <span type="text" class="sheet-table-header"> Nome</span>
+                            </div>
+                            <div class="repeating_inventario">
+                                <div class="sheet-section-table-full">
+                                    <input type="text" name="attr_inven_qtd" placeholder="1" class="sheet-table-input sheet-size-table-p sheet-align-text-center">
+                                    <input type="text" name="attr_inven_nome" placeholder="Amuleto da Sorte" class="sheet-table-input padding-left-3">
+                                </div>                             
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="sheet-bottom-image-sheet"></div>
+        </div>
+    </div>

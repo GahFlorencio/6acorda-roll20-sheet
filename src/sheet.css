@@ -1,0 +1,319 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+
+* {
+    margin:0;
+    padding:0;
+   
+}
+
+.sheet-container-sheet{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3d2817;
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sheet-content-sheet{
+    width: 900px;
+    min-width: 900px;
+    background: #b18853;
+    display: flex;
+    flex-direction: column;
+    font-family: "MedievalSharp", cursive;
+    font-weight: 400;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-top-image-sheet{
+    height:107px;
+    width: 100%;
+    background: url('./images/rolled.png') no-repeat center;
+    background-size: cover;
+    z-index: 0;
+    margin-bottom: -30px;
+}
+
+.sheet-bottom-image-sheet{
+    height:107px;
+    width: 100%;
+    background: url('./images/rolled.png') no-repeat center;
+    background-size: cover;
+    z-index: 0;
+    transform: rotate(180deg);
+    margin-top: -30px;
+}
+
+.sheet-middle-sheet{
+    flex: 1;
+    background: #b18853;
+    width: 850px;
+    background: url('./images/bg.png') no-repeat center;
+    background-size: cover;
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sheet-section {
+    padding:0 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sheet-badge-name {
+    width: 100%;
+    height: 93px;
+    display: flex;
+    align-items: center;
+    background: url('./images/char_name.png') no-repeat center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-character-name-input {
+    font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  border: none;
+  background: transparent;
+  color: #3d2817;
+  width: 536px;
+  outline: none;
+  padding-bottom: 10px;
+  font-family: "MedievalSharp", cursive;
+    
+    font-style: normal;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(61, 40, 23, 0.616);
+  font-style: italic;
+}
+
+.sheet-board {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    width: 100%;
+}
+
+.sheet-board-top {
+    display: flex;
+    flex-direction: row;
+    background: url('./images/section_name.png') no-repeat center;
+    background-size: contain;
+    width:300px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.sheet-table-top {
+    display: flex;
+    flex-direction: row;
+    background: url('./images/section_name.png') no-repeat center;
+    background-size: cover;
+    width:530px;
+    height: 43px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.sheet-table-top-full {
+    display: flex;
+    flex-direction: row;
+    background: url('./images/section_name.png') no-repeat center;
+    background-size: cover;
+    width:816px;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.sheet-table-body {
+    display: flex;
+    flex-direction: column;
+    width: 510px;
+    height: 200px;
+    background: url('./images/bg.png') no-repeat center;
+    background-size: cover;
+    padding:10px 10px;
+    margin-top: -10px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.164);
+}
+.sheet-table-body-full {
+    display: flex;
+    flex-direction: column;
+    width: 790px;
+    height: 247px;
+    background: url('./images/bg.png') no-repeat center;
+    background-size: cover;
+    padding:10px 10px;
+    margin-top: -10px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.164);
+}
+
+.sheet-board-body {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    background: url('./images/bg.png') no-repeat center;
+    background-size: cover;
+    padding:10px 10px;
+    margin-top: -10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.164);
+}
+.sheet-board-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3px;
+    padding: 2px 5px;
+    border-bottom: 1px solid rgba(61, 40, 23, 0.4);
+    font-weight: 900;
+}
+.sheet-board-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.sheet-board-button {
+    height: 40px;
+    width: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #8b5a2b;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sheet-default-input {
+    font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: #3d2817;
+  width:300px;
+  outline: none;
+  padding-bottom: 2px;
+  font-family: "MedievalSharp", cursive;    
+  font-style: normal;
+  margin-left: 10px;
+}
+.sheet-section-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sheet-section-table-header {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-section-table-header-full {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.sheet-table-header {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: center;
+  border: none;
+  background: #332010e3;
+  color: #cc9c74;
+  width:100%;
+  outline: none;
+  padding-bottom: 2px;
+  font-family: "MedievalSharp", cursive;    
+  font-style: normal;
+  border-bottom: 1px solid rgb(85, 62, 44);
+  border-left: 1px solid rgb(85, 62, 44);
+  border-right: 1px solid rgb(85, 62, 44);
+  
+}
+
+.sheet-table-input {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  text-align: left;
+  border: none;
+  background: transparent;
+  color: #3d2817;
+  width:100%;
+  outline: none;
+  padding-bottom: 2px;
+  font-family: "MedievalSharp", cursive;    
+  font-style: normal;
+  border-bottom: 1px solid rgba(61, 40, 23, 0.4);
+  border-left: 1px solid rgba(61, 40, 23, 0.4);
+  border-right: 1px solid rgba(61, 40, 23, 0.4);
+  
+}
+
+.sheet-section-table {
+    padding:0 2px;
+    margin: 0px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sheet-section-table-full {
+    padding:0 2px;
+    margin: 0px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.sheet-size-table-p {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+}
+.sheet-align-text-center {
+    text-align: center;
+}
+.sheet-padding-left-3 {
+    padding-left: 3px;
+}
+ 

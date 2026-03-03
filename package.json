@@ -1,0 +1,26 @@
+{
+  "name": "roll20-character-sheet",
+  "version": "1.0.0",
+  "description": "Ficha de personagem para Roll20 com Tailwind CSS",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/sheet.css -o ./dist/preview.css --minify",
+    "build:html": "node build.js",
+    "build": "npm run build:css && npm run build:html",
+    "clean": "node -e \"const fs=require('fs');const path='./dist';if(fs.existsSync(path))fs.rmSync(path,{recursive:true});fs.mkdirSync(path);\"",
+    "clean:full": "npm run clean && node -e \"const fs=require('fs');['node_modules'].forEach(p=>{if(fs.existsSync(p))fs.rmSync(p,{recursive:true})})\"",
+    "sanitize": "node -e \"const fs=require('fs'),glob=require('glob');['**/*.tmp','**/*.log','**/*.bak','**/*~','.DS_Store'].forEach(p=>glob.sync(p,{ignore:['node_modules/**']}).forEach(f=>fs.existsSync(f)&&fs.unlinkSync(f)));console.log('✓ Projeto sanitizado')\"",
+    "dev:css": "tailwindcss -i ./src/sheet.css -o ./dist/preview.css --watch",
+    "dev:html": "node build.js watch",
+    "dev:serve": "live-server dist --port=8080 --entry-file=index.html --wait=200 --no-browser",
+    "dev": "npm run build && concurrently \"npm run dev:css\" \"npm run dev:html\" \"npm run dev:serve\"",
+    "start": "npm run dev"
+  },
+  "keywords": ["roll20", "character-sheet", "rpg"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^3.4.1"
+  }
+}
